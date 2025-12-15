@@ -18,3 +18,5 @@ spring:
   app:
     security:
       enabled: true
+    cms:
+      page-size=9

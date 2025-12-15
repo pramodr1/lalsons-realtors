@@ -6,6 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -24,6 +27,8 @@ public interface PropertyRepository extends JpaRepository<Property, Long>, JpaSp
         @Param("locationName") String locationName, 
         @Param("minPrice") BigDecimal minPrice, 
         @Param("maxPrice") BigDecimal maxPrice,
-        @Param("bhk") Integer bhk
+        @Param("bhk") Integer bhk,
+        Pageable pageable
+
     );
 }
